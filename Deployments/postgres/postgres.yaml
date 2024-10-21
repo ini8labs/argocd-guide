@@ -1,0 +1,23 @@
+apiVersion: v1
+items:
+- apiVersion: acid.zalan.do/v1
+  kind: postgresql
+  metadata:
+    name: unode-dev-cluster
+    namespace: default
+  spec:
+    databases:
+      unode-dev: postgres
+    numberOfInstances: 2
+    postgresql:
+      version: "14"
+    teamId: myteam
+    users:
+      postgres: []
+    volume:
+      size: 10Gi
+  status:
+    PostgresClusterStatus: Running
+kind: List
+metadata:
+  resourceVersion: ""
