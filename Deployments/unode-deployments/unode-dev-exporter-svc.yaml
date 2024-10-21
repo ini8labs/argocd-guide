@@ -1,17 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2024-10-09T07:43:02Z"
   labels:
     app: unode-dev-exporter
   name: unode-dev-exporter
   namespace: default
-  resourceVersion: "25023450"
-  uid: 59f8a764-9ee8-4134-9b74-ea8b87e2953f
 spec:
-  clusterIP: 10.233.30.234
-  clusterIPs:
-  - 10.233.30.234
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4
