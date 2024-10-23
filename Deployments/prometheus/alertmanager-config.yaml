@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
 metadata:
   name: custom-alertmanager-config
-  namespace: default  # Replace with the namespace of your Alertmanager setup
+  namespace: monitoring  # Replace with the namespace of your Alertmanager setup
   labels:
     release: prometheus
     alertmanagerConfig: instance
