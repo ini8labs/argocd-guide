@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: unode-dev-exporter
-  namespace: monitoring
+  namespace: default
   labels:
     app: unode-dev-exporter
 spec:
