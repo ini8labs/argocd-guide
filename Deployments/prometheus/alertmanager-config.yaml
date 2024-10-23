@@ -14,8 +14,10 @@ spec:
     groupInterval: 1m
     repeatInterval: 1m
     receiver: webhook
+    
 
   receivers:
     - name: webhook
       webhookConfigs:
         - url: 'http://unode-backend-service.default.svc.cluster.local:80/alert'
+          sendResolved: true 
