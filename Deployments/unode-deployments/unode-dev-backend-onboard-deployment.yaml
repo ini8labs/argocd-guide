@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: unode-onboard-api
+  name: unode-backend-onboard
   namespace: default
   labels:
-    app: unode-onboard-api
+    app: unode-backend-onboard
 spec:
   replicas: 1
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
   selector:
     matchLabels:
-      app: unode-onboard-api
+      app: unode-backend-onboard
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -20,11 +20,11 @@ spec:
   template:
     metadata:
       labels:
-        app: unode-onboard-api
+        app: unode-backend-onboard
     spec:
       containers:
       - image: mohitini8/unode-dev-onboard-api:0.7.6
-        name: unode-onboard-api
+        name: unode-backend-onboard
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
