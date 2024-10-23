@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: unode-backend-onboard-ingress
+  name: unode-onboard-api-ingress
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/ingress.class: nginx
