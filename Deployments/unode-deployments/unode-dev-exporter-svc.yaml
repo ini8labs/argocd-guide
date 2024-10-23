@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: unode-dev-exporter
-  name: unode-dev-exporter
+    app: unode-exporter
+  name: unode-exporter
   namespace: default
 spec:
   internalTrafficPolicy: Cluster
@@ -15,7 +15,7 @@ spec:
     protocol: TCP
     targetPort: 8888
   selector:
-    app: unode-dev-exporter
+    app: unode-exporter
   sessionAffinity: None
   type: ClusterIP
 status:
