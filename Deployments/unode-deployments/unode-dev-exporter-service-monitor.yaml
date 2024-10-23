@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   labels:
     release: prometheus
-  name: unode-dev-exporter
+  name: unode-exporter
   namespace: default
 spec:
   endpoints:
@@ -15,4 +15,4 @@ spec:
     - default
   selector:
     matchLabels:
-      app: unode-dev-exporter
+      app: unode-exporter
