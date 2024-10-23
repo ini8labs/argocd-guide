@@ -18,4 +18,4 @@ spec:
   receivers:
     - name: webhook
       webhookConfigs:
-        - url: 'http://unode-backend-service.default.svc.cluster.local:80/alert'
+        - url: 'http://unode-api.default.svc.cluster.local:80/alert'
