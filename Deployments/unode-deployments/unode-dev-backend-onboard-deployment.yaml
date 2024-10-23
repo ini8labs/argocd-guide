@@ -23,7 +23,7 @@ spec:
         app: unode-backend-onboard
     spec:
       containers:
-      - image: mohitini8/unode-dev-onboard-api:0.7.6
+      - image: mohitini8/unode-dev-onboard-api:0.7.8
         name: unode-backend-onboard
         imagePullPolicy: IfNotPresent
         ports:
