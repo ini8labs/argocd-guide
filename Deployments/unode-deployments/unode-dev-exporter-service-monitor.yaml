@@ -12,7 +12,7 @@ spec:
    # port: "80"  # The port must be a string
   namespaceSelector:
     matchNames:
-    - default
+    - monitoring
   selector:
     matchLabels:
       app: unode-dev-exporter
