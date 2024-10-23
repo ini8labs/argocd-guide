@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: unode-dev-exporter
+  name: unode-exporter
   namespace: default
   labels:
-    app: unode-dev-exporter
+    app: unode-exporter
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: unode-dev-exporter
+      app: unode-exporter
   template:
     metadata:
       labels:
-        app: unode-dev-exporter
+        app: unode-exporter
     spec:
       containers:
-        - name: unode-dev-exporter
-          image: mohitini8/unode-dev-exporter:0.1.0
+        - name: unode-exporter
+          image: mohitini8/unode-exporter:0.1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8888
