@@ -3,11 +3,11 @@ items:
 - apiVersion: acid.zalan.do/v1
   kind: postgresql
   metadata:
-    name: unode-dev-cluster
+    name: unode-postgres
     namespace: default
   spec:
     databases:
-      unode-dev: postgres
+      unode: postgres
     numberOfInstances: 2
     postgresql:
       version: "14"
