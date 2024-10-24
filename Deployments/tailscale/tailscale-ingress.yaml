@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: unode-admin-frontend-ingress
+  namespace: default
+spec:
+  defaultBackend:
+    service:
+      name: unode-dev-admin-frontend-service
+      port:
+        number: 80
+  ingressClassName: tailscale
+  tls:
+    - hosts:
+        - unode-admin-frontend
