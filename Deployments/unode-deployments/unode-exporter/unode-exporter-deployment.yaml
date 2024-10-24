@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unode-exporter
+  namespace: default
+  labels:
+    app: unode-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: unode-exporter
+  template:
+    metadata:
+      labels:
+        app: unode-exporter
+    spec:
+      containers:
+        - name: unode-exporter
+          image: mohitini8/unode-exporter:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
