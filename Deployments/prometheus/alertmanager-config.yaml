@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
 metadata:
   name: custom-alertmanager-config
-  namespace: monitoring  # Replace with the namespace of your Alertmanager setup
+  namespace: default  # Replace with the namespace of your Alertmanager setup
   labels:
     release: prometheus
     alertmanagerConfig: instance
@@ -20,4 +20,4 @@ spec:
     - name: webhook
       webhookConfigs:
         - url: 'http://unode-backend-service.default.svc.cluster.local:80/alert'
-          sendResolved: true 
+
