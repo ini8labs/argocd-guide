@@ -5,8 +5,8 @@
 # values will be created in the operator namespace. If unset a Secret named
 # operator-oauth must be precreated.
 oauth:
-  clientId: "kyxWja53Nk11CNTRL"
-  clientSecret: "tskey-client-kyxWja53Nk11CNTRL-vN3b459y1WfB89DdS6ztVfLJY1Zs74qL"
+  clientId: "kRdK5Z6Wht11CNTRL"
+  clientSecret: "tskey-client-kRdK5Z6Wht11CNTRL-r8ARzEjvuCR8X3gM3CH2DR8vWXP2ynex"
 
 # installCRDs determines whether tailscale.com CRDs should be installed as part
 # of chart installation. We do not use Helm's CRD installation mechanism as that
