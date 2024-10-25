@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: unode-frontend
+  name: unode-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: unode-frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: unode-frontend
+    spec:
+      containers:
+      - image: mohitini8/unode-dev2-fe:0.3.8
+        name: unode-dev-fe
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
