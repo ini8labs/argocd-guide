@@ -1,26 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: unode-frontend
   name: unode-frontend
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: unode-frontend
-  strategy: {}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: unode-frontend
     spec:
       containers:
-      - image: mohitini8/unode-dev2-fe:0.3.8
-        name: unode-dev-fe
-        ports:
-        - containerPort: 3000
-        resources: {}
-status: {}
+        - name: unode-frontend
+          image: mohitini8/unode-dev2-fe:0.3.8
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              protocol: TCP
