@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: unode-dev-admin-api
+  namespace: default
+  labels:
+    app: unode-dev-admin-api
+spec:
+  type: ClusterIP
+  selector:
+    app: unode-dev-admin-api
+  ports:
+    - port: 8081
+      protocol: TCP
+      targetPort: 8081
