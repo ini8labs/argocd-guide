@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: unode-backend.techmentor.solutions
+  - host: unode-beta-api.unification.io
     http:
       paths:
       - backend:
