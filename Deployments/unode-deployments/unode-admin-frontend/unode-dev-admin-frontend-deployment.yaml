@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unode-dev-admin-frontend
+  namespace: default
+  labels:
+    app: unode-dev-admin-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: unode-dev-admin-frontend
+  template:
+    metadata:
+      labels:
+        app: unode-dev-admin-frontend
+    spec:
+      containers:
+        - name: unode-dev-admin-fe
+          image: mohitini8/unode-dev-admin-fe:0.0.7
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3001
+              protocol: TCP
