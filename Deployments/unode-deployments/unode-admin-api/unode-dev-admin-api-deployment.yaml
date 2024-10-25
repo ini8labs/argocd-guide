@@ -10,11 +10,6 @@ spec:
   selector:
     matchLabels:
       app: unode-dev-admin-api
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
   template:
     metadata:
       labels:
