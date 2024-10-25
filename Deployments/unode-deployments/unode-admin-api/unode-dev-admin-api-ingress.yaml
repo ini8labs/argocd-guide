@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: unode-dev-admin-api
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/ingress.class: nginx
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: unode-beta-api.unification.io
+      http:
+        paths:
+          - path: /super-user
+            pathType: Prefix
+            backend:
+              service:
+                name: unode-dev-admin-api
+                port:
+                  number: 8081
